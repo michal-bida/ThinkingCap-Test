@@ -1,0 +1,90 @@
+### V vs base
+base       Qwen/Qwen3-0.6B
+candidate  Qwen/Qwen3-0.6B + /home/michalb/github/ThinkingCap-Test/adapters/V
+bfcl_irrelevance  (240 prompts x 2 samples)
+  tokens saved      -23.3%    CI [-40.6%, -8.8%]
+  accuracy change   -1.67 pp  CI [-4.58 pp, +1.05 pp]
+bfcl_multiple  (200 prompts x 2 samples)
+  tokens saved       +0.9%    CI [-12.7%, +11.1%]
+  accuracy change   -6.00 pp  CI [-10.75 pp, -1.25 pp]
+bfcl_simple_python  (400 prompts x 2 samples)
+  tokens saved       +6.0%    CI [-2.1%, +12.8%]
+  accuracy change   -0.75 pp  CI [-3.25 pp, +1.75 pp]
+ifeval  (541 prompts x 2 samples)
+  tokens saved      -77.9%    CI [-93.0%, -63.1%]
+  accuracy change   -8.50 pp  CI [-11.37 pp, -5.64 pp]
+mbpp  (378 prompts x 2 samples)
+  tokens saved      -40.4%    CI [-54.0%, -28.5%]
+  accuracy change   -8.33 pp  CI [-12.04 pp, -4.89 pp]
+svamp  (1000 prompts x 2 samples)
+  tokens saved      +26.9%    CI [+22.0%, +31.4%]
+  accuracy change   -5.00 pp  CI [-6.70 pp, -3.35 pp]
+average over 4 benchmarks  (bfcl, ifeval, mbpp, svamp)
+  equal weights; tokens saved is a geometric mean; BFCL subsets pooled as one
+  tokens saved      -17.3%    CI [-21.9%, -12.9%]
+  accuracy change   -6.02 pp  CI [-7.34 pp, -4.73 pp]
+NOT SUITABLE FOR THE LEADERBOARD: this is not the full evaluation.
+  base
+    - it used samples 2, the recipe is 8
+  candidate
+    - it used samples 2, the recipe is 8
+### V vs A
+base       Qwen/Qwen3-0.6B + /home/michalb/github/ThinkingCap-Test/adapters/A
+candidate  Qwen/Qwen3-0.6B + /home/michalb/github/ThinkingCap-Test/adapters/V
+bfcl_irrelevance  (240 prompts x 2 samples)
+  tokens saved      -15.5%    CI [-33.3%, -0.8%]
+  accuracy change   -2.50 pp  CI [-5.00 pp, +0.00 pp]
+bfcl_multiple  (200 prompts x 2 samples)
+  tokens saved       +1.0%    CI [-15.1%, +13.5%]
+  accuracy change   -3.25 pp  CI [-7.75 pp, +0.75 pp]
+bfcl_simple_python  (400 prompts x 2 samples)
+  tokens saved       +7.3%    CI [-3.1%, +16.9%]
+  accuracy change   -1.88 pp  CI [-4.50 pp, +0.62 pp]
+ifeval  (541 prompts x 2 samples)
+  tokens saved      -66.4%    CI [-81.3%, -53.2%]
+  accuracy change   -7.67 pp  CI [-10.44 pp, -4.71 pp]
+mbpp  (378 prompts x 2 samples)
+  tokens saved      -35.7%    CI [-48.6%, -24.2%]
+  accuracy change   -9.39 pp  CI [-12.97 pp, -5.82 pp]
+svamp  (1000 prompts x 2 samples)
+  tokens saved      +23.4%    CI [+17.7%, +29.1%]
+  accuracy change   -4.80 pp  CI [-6.55 pp, -3.10 pp]
+average over 4 benchmarks  (bfcl, ifeval, mbpp, svamp)
+  equal weights; tokens saved is a geometric mean; BFCL subsets pooled as one
+  tokens saved      -15.0%    CI [-19.8%, -10.5%]
+  accuracy change   -6.06 pp  CI [-7.36 pp, -4.73 pp]
+NOT SUITABLE FOR THE LEADERBOARD: this is not the full evaluation.
+  base
+    - it used samples 2, the recipe is 8
+  candidate
+    - it used samples 2, the recipe is 8
+### V vs S
+base       Qwen/Qwen3-0.6B + /home/michalb/github/ThinkingCap-Test/adapters/S
+candidate  Qwen/Qwen3-0.6B + /home/michalb/github/ThinkingCap-Test/adapters/V
+bfcl_irrelevance  (240 prompts x 2 samples)
+  tokens saved      -21.3%    CI [-41.4%, -5.1%]
+  accuracy change   -0.42 pp  CI [-2.71 pp, +1.88 pp]
+bfcl_multiple  (200 prompts x 2 samples)
+  tokens saved       +2.1%    CI [-9.1%, +10.7%]
+  accuracy change   -2.50 pp  CI [-7.25 pp, +2.25 pp]
+bfcl_simple_python  (400 prompts x 2 samples)
+  tokens saved       +6.1%    CI [-1.0%, +11.8%]
+  accuracy change   -1.25 pp  CI [-3.88 pp, +1.50 pp]
+ifeval  (541 prompts x 2 samples)
+  tokens saved      -55.6%    CI [-67.5%, -44.1%]
+  accuracy change   -8.41 pp  CI [-11.55 pp, -5.27 pp]
+mbpp  (378 prompts x 2 samples)
+  tokens saved      -38.1%    CI [-50.7%, -26.1%]
+  accuracy change   -8.60 pp  CI [-12.04 pp, -5.29 pp]
+svamp  (1000 prompts x 2 samples)
+  tokens saved      -12.5%    CI [-20.9%, -4.7%]
+  accuracy change   -2.95 pp  CI [-4.85 pp, -1.10 pp]
+average over 4 benchmarks  (bfcl, ifeval, mbpp, svamp)
+  equal weights; tokens saved is a geometric mean; BFCL subsets pooled as one
+  tokens saved      -25.6%    CI [-30.3%, -21.0%]
+  accuracy change   -5.32 pp  CI [-6.58 pp, -3.96 pp]
+NOT SUITABLE FOR THE LEADERBOARD: this is not the full evaluation.
+  base
+    - it used samples 2, the recipe is 8
+  candidate
+    - it used samples 2, the recipe is 8

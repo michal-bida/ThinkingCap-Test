@@ -1,0 +1,13 @@
+source          variant      n  accuracy  think tokens
+arc_easy        full     1312     99.5%           444
+arc_easy        cut      1244     99.8%           361
+arc_easy        empty    1312     70.2%             0
+commonsense_qa  full      956    100.0%           401
+commonsense_qa  cut       944    100.0%           308
+commonsense_qa  empty     956     66.5%             0
+gsm8k           full     1152     89.6%          1304
+gsm8k           cut      1140     95.0%           354
+gsm8k           empty    1152     19.5%             0
+skywork         full      220     65.5%          2143
+skywork         cut       220     61.8%           745
+skywork         empty     220     20.5%             0

@@ -1,0 +1,38 @@
+base       Qwen/Qwen3-0.6B
+candidate  Qwen/Qwen3-0.6B + /home/michalb/github/ThinkingCap-Test/adapters/S2
+
+bfcl_irrelevance  (240 prompts x 2 samples)
+  tokens saved       +6.3%    CI [-4.5%, +15.5%]
+  accuracy change   +1.04 pp  CI [-0.83 pp, +3.12 pp]
+
+bfcl_multiple  (200 prompts x 2 samples)
+  tokens saved       +8.5%    CI [+3.9%, +13.1%]
+  accuracy change   +0.25 pp  CI [-4.25 pp, +4.50 pp]
+
+bfcl_simple_python  (400 prompts x 2 samples)
+  tokens saved       +9.6%    CI [+5.9%, +13.7%]
+  accuracy change   +1.87 pp  CI [-0.25 pp, +4.12 pp]
+
+ifeval  (541 prompts x 2 samples)
+  tokens saved       -3.6%    CI [-11.5%, +3.9%]
+  accuracy change   +1.57 pp  CI [-1.29 pp, +4.34 pp]
+
+mbpp  (378 prompts x 2 samples)
+  tokens saved       +3.7%    CI [-2.7%, +9.7%]
+  accuracy change   +0.40 pp  CI [-2.51 pp, +3.57 pp]
+
+svamp  (1000 prompts x 2 samples)
+  tokens saved       +9.1%    CI [+5.3%, +12.7%]
+  accuracy change   +0.40 pp  CI [-1.00 pp, +1.75 pp]
+
+average over 4 benchmarks  (bfcl, ifeval, mbpp, svamp)
+  equal weights; tokens saved is a geometric mean; BFCL subsets pooled as one
+  tokens saved       +4.5%    CI [+1.7%, +7.2%]
+  accuracy change   +0.90 pp  CI [-0.27 pp, +2.09 pp]
+
+
+NOT SUITABLE FOR THE LEADERBOARD: this is not the full evaluation.
+  base
+    - it used samples 2, the recipe is 8
+  candidate
+    - it used samples 2, the recipe is 8

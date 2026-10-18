@@ -1,0 +1,22 @@
+12000 traces from samples/train3k.jsonl
+
+source              n  tokens  median  think%  strict  lenient  trunc
+arc_easy         4000     515     362     98%     84%      84%     0%
+commonsense_qa   4000     495     404     98%     55%      55%     0%
+gsm8k            4000    2145    1776     89%     44%      67%    22%
+
+Difficulty: questions by number of leniently correct samples out of 4
+  arc_easy        0/4: 61  1/4: 57  2/4: 66  3/4: 93  4/4:723
+  commonsense_qa  0/4:270  1/4:123  2/4:110  3/4:122  4/4:375
+  gsm8k           0/4:162  1/4: 84  2/4:127  3/4:175  4/4:452
+
+Correct traces (lenient): where the gold answer first appears in the thinking
+source              n  found  first@   after  checks  shortest/mean
+arc_easy         3360    95%     90%      34       0            77%
+commonsense_qa   2209    97%     87%      43       0            78%
+gsm8k            2671    98%     34%     658       7            71%
+
+  found  = share of correct traces whose thinking mentions the gold answer
+  first@ = median position of that first mention, as a share of the thinking
+  after  = median thinking tokens after it;  checks = median Wait/check restarts after it
+  shortest/mean = shortest correct sample of a question vs its mean correct sample

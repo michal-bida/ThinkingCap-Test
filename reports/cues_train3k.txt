@@ -1,0 +1,62 @@
+1. Answer revisions inside the thinking: first statement
+
+source              n  has cand  1st right  final right  changed  fixed  broke  tok after 1st  of thinking
+arc_easy         3992       92%      82.1%        84.4%     9.4%   3.2%   1.0%             39          18%
+commonsense_qa   3999       97%      52.6%        55.0%    13.4%   5.4%   3.0%             67          25%
+gsm8k            3128       99%      87.9%        89.2%     4.5%   2.5%   1.1%            538          46%
+
+  has cand = share with such a statement in the thinking
+  1st right / final right = the statement's answer vs the reply's answer, both vs gold
+  fixed / broke = first wrong -> final right, first right -> final wrong
+  tok after 1st = median thinking tokens after it; of thinking = mean share they make up
+
+1. Answer revisions inside the thinking: first COMMITTED statement (no maybe/could/or/?)
+
+source              n  has cand  1st right  final right  changed  fixed  broke  tok after 1st  of thinking
+arc_easy         3992       91%      83.5%        84.4%     6.9%   1.6%   0.7%             32          14%
+commonsense_qa   3999       96%      54.4%        55.1%     7.1%   2.3%   1.5%             32          15%
+gsm8k            3128       98%      88.8%        89.4%     3.5%   1.9%   1.3%            494          43%
+
+  has cand = share with such a statement in the thinking
+  1st right / final right = the statement's answer vs the reply's answer, both vs gold
+  fixed / broke = first wrong -> final right, first right -> final wrong
+  tok after 1st = median thinking tokens after it; of thinking = mean share they make up
+
+2. Word cost of the thinking
+
+  7355577 words, 7730219 word tokens, 1.051 tokens/word
+  ceiling of a synonym rewrite (every multi-token word -> 1 token): 4.8% of word tokens
+
+  costliest multi-token words (extra tokens they spend):
+    that's               x 27055  2 tokens
+    there's              x 23579  2 tokens
+    it's                 x 19145  2 tokens
+    let's                x 13814  2 tokens
+    miscalculation       x  4507  4 tokens
+    don't                x  8314  2 tokens
+    i'm                  x  7556  2 tokens
+    doesn't              x  5845  2 tokens
+    misread              x  5491  2 tokens
+    didn't               x  3870  2 tokens
+    can't                x  3596  2 tokens
+    he's                 x  3446  2 tokens
+    phrased              x  1664  3 tokens
+    isn't                x  3244  2 tokens
+    miscalculated        x  1159  3 tokens
+    they're              x  2251  2 tokens
+    you're               x  2219  2 tokens
+    yep                  x  1890  2 tokens
+    she's                x  1502  2 tokens
+    earth's              x  1432  2 tokens
+    marbles              x  1230  2 tokens
+    tuesday              x  1134  2 tokens
+    protons              x  1082  2 tokens
+    watermelons          x   514  3 tokens
+    nickels              x   942  2 tokens
+
+
+3. Truncated traces (hit 4096 tokens, scored 0): is there a committed answer before the cap?
+
+gsm8k           truncated   872  with committed answer   78%  that answer right 55.6%  median token position 1691
+commonsense_qa  truncated     1  with committed answer  100%  that answer right  0.0%  median token position 1288
+arc_easy        truncated     8  with committed answer   75%  that answer right 66.7%  median token position 2498

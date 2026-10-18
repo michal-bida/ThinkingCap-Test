@@ -1,0 +1,31 @@
+base       Qwen/Qwen3-0.6B
+candidate  Qwen/Qwen3-0.6B + /home/michalb/github/ThinkingCap-Test/adapters/Db
+
+bfcl_irrelevance  (240 prompts x 8 samples)
+  tokens saved      +46.1%    CI [+42.8%, +49.1%]
+  accuracy change   +6.04 pp  CI [+4.01 pp, +8.13 pp]
+
+bfcl_multiple  (200 prompts x 8 samples)
+  tokens saved      +41.9%    CI [+39.3%, +44.5%]
+  accuracy change   -1.12 pp  CI [-4.62 pp, +2.56 pp]
+
+bfcl_simple_python  (400 prompts x 8 samples)
+  tokens saved      +35.3%    CI [+33.1%, +37.5%]
+  accuracy change   -1.41 pp  CI [-2.94 pp, +0.19 pp]
+
+ifeval  (541 prompts x 8 samples)
+  tokens saved      +54.7%    CI [+52.2%, +57.0%]
+  accuracy change   -0.28 pp  CI [-2.10 pp, +1.55 pp]
+
+mbpp  (378 prompts x 8 samples)
+  tokens saved      +33.0%    CI [+29.3%, +36.6%]
+  accuracy change   -1.22 pp  CI [-2.98 pp, +0.46 pp]
+
+svamp  (1000 prompts x 8 samples)
+  tokens saved      +56.4%    CI [+55.0%, +57.8%]
+  accuracy change   -2.41 pp  CI [-3.41 pp, -1.47 pp]
+
+average over 4 benchmarks  (bfcl, ifeval, mbpp, svamp)
+  equal weights; tokens saved is a geometric mean; BFCL subsets pooled as one
+  tokens saved      +47.0%    CI [+45.8%, +48.1%]
+  accuracy change   -0.78 pp  CI [-1.49 pp, -0.05 pp]

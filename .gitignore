@@ -14,3 +14,17 @@ data/
 
 outputs/
 *.log
+
+# sampled training traces: rebuilt by sample_traces.py
+samples/
+
+# run_queue.sh state
+queue/*.done
+queue/*.failed
+
+# trained LoRA adapters: large; the submitted one is sent separately as .safetensors
+adapters/
+
+# local secrets and IDE state
+.env
+.idea/

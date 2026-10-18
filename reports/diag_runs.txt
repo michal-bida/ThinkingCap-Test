@@ -1,0 +1,35 @@
+base-s2
+  bfcl_irrelevance     acc 0.827 tok    206 think    179 reply    27 trunc 0.000 loop 0.019 noclose 0.000
+  bfcl_multiple        acc 0.785 tok    221 think    198 reply    24 trunc 0.000 loop 0.003 noclose 0.000
+  bfcl_simple_python   acc 0.816 tok    195 think    170 reply    24 trunc 0.000 loop 0.004 noclose 0.000
+  ifeval               acc 0.581 tok    656 think    406 reply   250 trunc 0.029 loop 0.153 noclose 0.007
+  mbpp                 acc 0.515 tok   2150 think   2105 reply    45 trunc 0.079 loop 0.597 noclose 0.077
+  svamp                acc 0.885 tok    692 think    683 reply     9 trunc 0.018 loop 0.132 noclose 0.018
+A-s2
+  bfcl_irrelevance     acc 0.835 tok    219 think    192 reply    27 trunc 0.000 loop 0.023 noclose 0.000
+  bfcl_multiple        acc 0.757 tok    222 think    198 reply    24 trunc 0.000 loop 0.007 noclose 0.000
+  bfcl_simple_python   acc 0.828 tok    197 think    173 reply    24 trunc 0.001 loop 0.006 noclose 0.001
+  ifeval               acc 0.573 tok    701 think    456 reply   245 trunc 0.039 loop 0.217 noclose 0.018
+  mbpp                 acc 0.525 tok   2223 think   2167 reply    57 trunc 0.110 loop 0.657 noclose 0.106
+  svamp                acc 0.883 tok    661 think    652 reply     9 trunc 0.022 loop 0.141 noclose 0.021
+S-s2
+  bfcl_irrelevance     acc 0.815 tok    209 think    184 reply    25 trunc 0.002 loop 0.013 noclose 0.002
+  bfcl_multiple        acc 0.750 tok    224 think    201 reply    23 trunc 0.003 loop 0.013 noclose 0.003
+  bfcl_simple_python   acc 0.821 tok    195 think    171 reply    24 trunc 0.000 loop 0.010 noclose 0.000
+  ifeval               acc 0.580 tok    750 think    531 reply   218 trunc 0.043 loop 0.232 noclose 0.025
+  mbpp                 acc 0.517 tok   2185 think   2115 reply    70 trunc 0.104 loop 0.604 noclose 0.103
+  svamp                acc 0.865 tok    450 think    439 reply    11 trunc 0.010 loop 0.099 noclose 0.010
+MS-s2
+  bfcl_irrelevance     acc 0.835 tok    204 think    177 reply    27 trunc 0.000 loop 0.015 noclose 0.000
+  bfcl_multiple        acc 0.765 tok    213 think    190 reply    24 trunc 0.000 loop 0.005 noclose 0.000
+  bfcl_simple_python   acc 0.815 tok    191 think    166 reply    24 trunc 0.000 loop 0.007 noclose 0.000
+  ifeval               acc 0.588 tok    702 think    449 reply   252 trunc 0.043 loop 0.189 noclose 0.019
+  mbpp                 acc 0.519 tok   2257 think   2207 reply    50 trunc 0.098 loop 0.643 noclose 0.097
+  svamp                acc 0.872 tok    497 think    486 reply    10 trunc 0.013 loop 0.120 noclose 0.012
+V-s2
+  bfcl_irrelevance     acc 0.810 tok    254 think    220 reply    34 trunc 0.006 loop 0.044 noclose 0.006
+  bfcl_multiple        acc 0.725 tok    219 think    195 reply    24 trunc 0.005 loop 0.020 noclose 0.005
+  bfcl_simple_python   acc 0.809 tok    183 think    159 reply    24 trunc 0.003 loop 0.007 noclose 0.003
+  ifeval               acc 0.496 tok   1166 think    818 reply   348 trunc 0.171 loop 0.394 noclose 0.128
+  mbpp                 acc 0.431 tok   3018 think   2983 reply    35 trunc 0.271 loop 0.574 noclose 0.271
+  svamp                acc 0.836 tok    506 think    496 reply    10 trunc 0.037 loop 0.115 noclose 0.036

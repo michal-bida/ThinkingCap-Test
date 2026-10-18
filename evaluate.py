@@ -43,6 +43,7 @@ from collections import Counter
 import json
 import os
 from pathlib import Path
+import shutil
 
 from utils.eval import sandbox
 from utils.eval.benchmarks import paths, sha256
@@ -137,6 +138,9 @@ def parse_arguments():
     parser.add_argument("--sandbox", choices=sandbox.MODES, help="Default: bwrap if available")
     parser.add_argument("--workers", type=int, default=min(8, os.cpu_count() or 1),
                         help="Parallel MBPP+ grading processes")
+    parser.add_argument("--gpu-memory-utilization", type=float, default=0.85,
+                        help="Share of GPU memory vLLM may take (default 0.85). Lower it when "
+                             "a desktop shares the GPU; it sizes the KV cache, not the outputs")
     parser.add_argument("--regrade", action="store_true",
                         help=f"Re-grade a finished run's {RECORDS} without generating again")
     arguments = parser.parse_args()
@@ -302,6 +306,8 @@ def load_engine(arguments, longest_generation):
     # FlashInfer's sampler compiles a kernel on the fly and needs nvcc, which
     # driver-only machines do not have. The PyTorch sampler needs no toolchain.
     os.environ.setdefault("VLLM_USE_FLASHINFER_SAMPLER", "0")
+    # FlashInfer's attention compiles on the fly too; without nvcc use Triton's.
+    attention = None if shutil.which("nvcc") else "TRITON_ATTN"
     from vllm import LLM
     from vllm.lora.request import LoRARequest
 
@@ -311,9 +317,10 @@ def load_engine(arguments, longest_generation):
     model = LLM(model=arguments.model, revision=arguments.revision,
                 tokenizer_revision=arguments.revision,
                 max_model_len=longest_generation + PROMPT_BUDGET,
-                gpu_memory_utilization=0.85,
+                gpu_memory_utilization=arguments.gpu_memory_utilization,
                 enable_prefix_caching=False, generation_config="vllm", seed=arguments.seed,
-                enable_lora=rank is not None, max_lora_rank=rank or 16)
+                enable_lora=rank is not None, max_lora_rank=rank or 16,
+                attention_backend=attention)
     if not arguments.adapter:
         return model, None
     lora = LoRARequest("candidate", 1, str(Path(arguments.adapter).resolve()))

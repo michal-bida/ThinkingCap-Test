@@ -1,0 +1,7 @@
+2398 questions with a strictly correct finished trace
+A0   2398 rows -> data/arms/A0.jsonl   thinking tokens: arc_easy 471  commonsense_qa 460  gsm8k 1384
+A    2398 rows -> data/arms/A.jsonl   thinking tokens: arc_easy 343  commonsense_qa 353  gsm8k 1104
+B    2398 rows -> data/arms/B.jsonl   thinking tokens: arc_easy 294  commonsense_qa 282  gsm8k 384
+S    2398 rows -> data/arms/S.jsonl   thinking tokens: arc_easy 301  commonsense_qa 315  gsm8k 363
+T    2398 rows -> data/arms/T.jsonl   thinking tokens: arc_easy 244  commonsense_qa 263  gsm8k 298
+U    2398 rows -> data/arms/U.jsonl   thinking tokens: arc_easy 244  commonsense_qa 263  gsm8k 298
